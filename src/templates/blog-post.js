@@ -14,7 +14,7 @@ export default function BlogPost({ data }) {
 
 export const query = graphql`
   query($slug: String!) {
-    mdx(id: {eq: $slug}) {
+    mdx(slug: {eq: $slug}) {
         id
         slug
         body
