@@ -11,6 +11,15 @@ module.exports = {
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
     {
+      resolve: "gatsby-plugin-mdx",
+      options: {
+        extensions: [".mdx", ".md"],
+        defaultLayouts: {
+          default: require.resolve("./src/components/layout.js"),
+        }
+      }
+    },
+    {
       resolve: "gatsby-source-filesystem",
       options: {
         name: "images",
@@ -26,5 +35,15 @@ module.exports = {
       },
       __key: "pages",
     },
+    {
+      resolve: "gatsby-source-git",
+      options: {
+        name: "zettelkasten",
+        remote: "https://github.com/rebot/Zettelkasten",
+        local: "~/Notes",
+        patterns: ["!Templates", "**/*.{md,mdx}"]
+      },
+      __key: "zettelkasten"
+    }
   ],
 };
