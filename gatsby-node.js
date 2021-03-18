@@ -7,3 +7,23 @@ exports.onCreateNode = ({ node, getNode }) => {
         console.log(fileNode.relativePath)
     }
 }
+
+exports.createPages = async ({ graphql, actions }) => {
+    const result = await graphql(`
+        query {
+            allMdx {
+            edges {
+                node {
+                    id
+                    slug
+                    timeToRead
+                    wordCount {
+                        paragraphs
+                    }
+                }
+            }
+            }
+        }
+    `)
+    console.log(JSON.stringify(result, null, 4))
+}

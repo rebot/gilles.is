@@ -40,7 +40,6 @@ module.exports = {
       options: {
         name: "zettelkasten",
         remote: "https://github.com/rebot/Zettelkasten",
-        local: "~/Notes",
         patterns: ["!Templates", "**/*.{md,mdx}"]
       },
       __key: "zettelkasten"
