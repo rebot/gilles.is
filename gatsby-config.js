@@ -3,7 +3,6 @@ module.exports = {
     title: "Gilles.is",
   },
   plugins: [
-    "gatsby-plugin-theme-ui",
     "gatsby-plugin-image",
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-mdx",
@@ -42,6 +41,12 @@ module.exports = {
         patterns: ["!Templates", "**/*.{md,mdx}"]
       },
       __key: "zettelkasten"
-    }
+    },
+    {
+      resolve: "gatsby-plugin-theme-ui",
+      options: {
+        preset: "@theme-ui/preset-tosh",
+      }
+    },
   ],
 };
