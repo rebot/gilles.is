@@ -7,6 +7,7 @@ export default function BlogPost({ data }) {
     return (
         <>
             <h3>{post.slug}</h3>
+            <hr/>
             <MDXRenderer>{post.body}</MDXRenderer>
         </>
     )

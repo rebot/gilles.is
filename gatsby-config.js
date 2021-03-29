@@ -45,6 +45,7 @@ module.exports = {
     {
       resolve: "gatsby-plugin-theme-ui",
       options: {
+        prismPreset: 'night-owl',
         preset: "@theme-ui/preset-tosh",
       }
     },
