@@ -1,15 +1,13 @@
 import React from "react"
 import { MDXProvider } from "@mdx-js/react"
-import { Link } from "gatsby"
 
-const shortcodes = { Link, Youtube }
+const shortcodes = {}
 
 const components = {
     ...shortcodes,
-    pre: props => <div {...props} />,
-    code: props => <pre style={{color: 'tomato'}} {...props} />
+    a: props => <a {...props}><span sx={{fontFamily: 'icon'}} className="material-icons-outlined">open_in_new</span></a>
   }
 
 export default ({ children }) => (
-    <MDXProvider components={components}><p>Hallo!</p>{children}</MDXProvider>
+    <MDXProvider components={components}>{children}</MDXProvider>
 )

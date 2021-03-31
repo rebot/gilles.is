@@ -1168,6 +1168,31 @@
     minimatch "^3.0.4"
     strip-json-comments "^3.1.1"
 
+"@fontsource/crimson-text@^4.2.2":
+  version "4.2.2"
+  resolved "https://registry.yarnpkg.com/@fontsource/crimson-text/-/crimson-text-4.2.2.tgz#95778b10671922738f573284be785b2dce109943"
+  integrity sha512-stq215TSytQAYPcDnAy5m1KBD4im5RdJQNWoZvjQXPG+eKUC1ReuEJRfuWzcy5Bbub6bp31sO/tV0h0kQLy2OQ==
+
+"@fontsource/fira-code@^4.2.2":
+  version "4.2.2"
+  resolved "https://registry.yarnpkg.com/@fontsource/fira-code/-/fira-code-4.2.2.tgz#4737070741f5a7fc40944c41215d26cd9ff56b80"
+  integrity sha512-Bhg7rQ/CUbedA6B6K6gS2GDEa5JJjQwSqq1KMz4wVMaXXL+igsLrr4VKKmdfExwlB6o7Ie8kScXg4camZmt7TQ==
+
+"@fontsource/material-icons@^4.2.1":
+  version "4.2.1"
+  resolved "https://registry.yarnpkg.com/@fontsource/material-icons/-/material-icons-4.2.1.tgz#b673a9a37a984721ff8edc9a9e8566c42081587d"
+  integrity sha512-u5JBOQ7lOWlBtkTTvhR2zM01sJIqLnt+tR6lEBFzYOU/J/eWZmI+C6QC3/HH7gWO2YQYRmxhI/OuyvzV0EiywQ==
+
+"@fontsource/roboto@^4.2.2":
+  version "4.2.2"
+  resolved "https://registry.yarnpkg.com/@fontsource/roboto/-/roboto-4.2.2.tgz#39b87680b25915539e445cc6e0fac99e1a81f58b"
+  integrity sha512-VzYWCdqjrepaT7dezuaTZXKaW1L+f5FSp7DGxMqTrf81OTzh9xpKIpr8lgjPg2ZNwiT8rnU++mJ4hojsCnOoqw==
+
+"@fontsource/share-tech@^4.2.3":
+  version "4.2.3"
+  resolved "https://registry.yarnpkg.com/@fontsource/share-tech/-/share-tech-4.2.3.tgz#4d8e097a333e8f263b4ffdf906fc2d0fc47692c1"
+  integrity sha512-JaVeNJPQDMI4zALK68P1RCPrD58aDRDMyvbgNA3yXVGiClQB9imURt95ha3jqBesRHMVOyD8LWz6hgqu7wGaDA==
+
 "@gatsbyjs/reach-router@^1.3.6":
   version "1.3.6"
   resolved "https://registry.yarnpkg.com/@gatsbyjs/reach-router/-/reach-router-1.3.6.tgz#4e8225836959be247890b66f21a3198a0589e34d"

@@ -5,16 +5,12 @@ module.exports = {
   plugins: [
     "gatsby-plugin-image",
     "gatsby-plugin-react-helmet",
-    "gatsby-plugin-mdx",
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
     {
       resolve: "gatsby-plugin-mdx",
       options: {
         extensions: [".mdx", ".md"],
-        defaultLayouts: {
-          default: require.resolve("./src/components/layout.js"),
-        }
       }
     },
     {
@@ -45,7 +41,6 @@ module.exports = {
     {
       resolve: "gatsby-plugin-theme-ui",
       options: {
-        prismPreset: 'night-owl',
         preset: "@theme-ui/preset-tosh",
       }
     },

@@ -1,40 +1,73 @@
+import "@fontsource/roboto/300.css"
+import "@fontsource/crimson-text"
+import "@fontsource/fira-code"
+import "@fontsource/material-icons"
+import "@fontsource/share-tech"
+
 export default {
     breakpoints: ['40em', '52em', '64em'],
     space: [0, 4, 8, 16, 32, 64, 128, 256, 512],
     fonts: {
-        heading: 'inherit',
-        monospace: 'Menlo, monospace',
+        body: 'Roboto,Verdana,Geneva,sans-serif',
+        heading: 'Crimson Text,Georgia,Utopia,Charter,serif',
+        pre: 'Fira Code, monospace',
+        code: 'Share Tech, monospace',
+        icon: 'Material Icons'
     },
     fontSizes: [12, 14, 16, 20, 24, 32, 48, 64, 96],
     fontWeights: {
-        body: 400,
-        heading: 700,
+        body: 300,
+        code: 400,
+        heading: 400,
         bold: 700,
     },
     lineHeights: {
         body: 1.5,
-        heading: 1.125,
+        heading: 1.06,
+    },
+    letterSpacings: {
+        heading: -0.5
     },
     colors: {
         text: '#000',
         background: '#fff',
         primary: '#07c',
         secondary: '#30c',
+        highlight: '#ffff88',
         muted: '#f6f6f6',
+        accent: '#9BD6CC',
+        heading: '#001f42',
         modes: {
             dark: {
                 text: '#fff',
                 background: '#000',
                 primary: '#0cf',
+            },
+            peach: {
+                text: '#515151',
+                background: '#fef7ea',
+                primary: '#18457c',
+                secondary: '#071527',
+                muted: '#f4eee2'
             }
         }
     },
     text: {
         heading: {
+            color: 'heading',
             fontFamily: 'heading',
             lineHeight: 'heading',
             fontWeight: 'heading',
+            letterSpacing: 'heading',
+            code: {
+                variant: 'text.code'
+            }
         },
+        code: {
+            fontFamily: 'code',
+            lineHeight: 'code',
+            fontWeight: 'code'
+        }
     },
     styles: {
         root: {
@@ -70,15 +103,20 @@ export default {
             fontSize: 0,
         },
         pre: {
-            fontFamily: 'monospace',
+            fontFamily: 'Fira Code, monospace',
             overflowX: 'auto',
             code: {
-                color: 'inherit',
-            },
+                fontFamily: 'pre'
+            }
         },
         code: {
-            fontFamily: 'monospace',
+            variant: 'text.code',
             fontSize: 'inherit',
+        },
+        p: {
+            code: {
+                variant: 'text.code'
+            }
         },
         table: {
             width: '100%',
