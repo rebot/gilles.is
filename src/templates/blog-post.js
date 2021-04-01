@@ -7,7 +7,7 @@ import MDXRenderer from "gatsby-plugin-mdx/mdx-renderer"
 
 export default function BlogPost({ data }) {
     const [ colorMode, setColorMode ] = useColorMode()
-    const post = data.mdx
+    const post = data.mdx || data
     return (
         <>
             <Grid pt={2} gap={0} width={[null, 64, 64]} as="header">
