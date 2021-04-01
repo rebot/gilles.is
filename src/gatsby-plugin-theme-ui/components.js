@@ -2,11 +2,14 @@
 
 import React from "react"
 import Prism from "@theme-ui/prism"
-import { jsx, Themed } from "theme-ui"
+import { Badge } from "theme-ui"
 
-import { Youtube } from "components/ui"
+const shortcodes = {
+  Badge
+}
 
 export default {
+    ...shortcodes,
     pre: props => props.children,
     code: Prism,
 }

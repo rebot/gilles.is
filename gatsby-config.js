@@ -51,6 +51,9 @@ module.exports = {
       resolve: "gatsby-plugin-mdx",
       options: {
         extensions: [".mdx", ".md"],
+        defaultLayouts: {
+          default: require.resolve("./src/templates/blog-post.js")
+        },
         gatsbyRemarkPlugins: [
           {
             resolve: "gatsby-remark-katex",
