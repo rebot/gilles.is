@@ -4,8 +4,9 @@ import "@fontsource/fira-code"
 import "@fontsource/material-icons"
 import "@fontsource/share-tech"
 
-import theme from "@theme-ui/prism/presets/prism.json"
+import prism from "@theme-ui/prism/presets/theme-ui"
 
+import "katex/dist/katex.min.css"
 
 export default {
     breakpoints: ['40em', '52em', '64em'],
@@ -45,6 +46,7 @@ export default {
                 text: '#fff',
                 background: '#000',
                 primary: '#0cf',
+                heading: '#f6f6f6'
             },
             peach: {
                 text: '#515151',
@@ -70,6 +72,12 @@ export default {
             fontFamily: 'code',
             lineHeight: 'code',
             fontWeight: 'code'
+        },
+        hyperlink: {
+            color: "primary",
+            ":hover, :focus": {
+                color: "secondary",
+            }
         }
     },
     styles: {
@@ -109,14 +117,17 @@ export default {
             fontFamily: 'Fira Code, monospace',
             overflowX: 'auto',
             code: {
-                fontFamily: 'pre'
-            }
+                fontFamily: 'pre',
+            },
         },
         code: {
-            ...theme,
+            ...prism,
             variant: 'text.code',
             fontSize: 'inherit',
             bg: 'muted',
+            ".comment": {
+                color: 'gainsboro'
+            }
         },
         p: {
             code: {
@@ -137,10 +148,7 @@ export default {
             borderBottomStyle: 'solid',
         },
         a: {
-            color: "primary",
-            ":hover, :focus": {
-                color: "secondary",
-            }
+            variant: 'text.hyperlink'
         }
     },
 }

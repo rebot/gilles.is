@@ -1,27 +1,25 @@
 /** @jsx jsx */
 
 import React from "react"
-import { graphql } from "gatsby"
-import { jsx, useColorMode, Themed } from "theme-ui"
+import { graphql, Link } from "gatsby"
+import { jsx, useColorMode, Themed, Grid, Box, Button } from "theme-ui"
 import MDXRenderer from "gatsby-plugin-mdx/mdx-renderer"
-
-/* 
- * `Styled` component worden hernoemd naar `Themed` in de laatste versie van theme-ui
- */
 
 export default function BlogPost({ data }) {
     const [ colorMode, setColorMode ] = useColorMode()
     const post = data.mdx
     return (
         <>
-            <Themed.h3>{post.slug}</Themed.h3>
-            <button
-                onClick={(e) => {
-                    setColorMode(colorMode === 'default' ? 'dark' : 'default')
-                }}>
-                Toggle {colorMode === 'default' ? 'Dark' : 'Light'}
-            </button>
-            <span sx={{fontFamily: 'icon'}} className="material-icons-outlined">open_in_new</span>
+            <Grid pt={2} gap={0} width={[null, 64, 64]} as="header">
+                <Box as={Themed.h3} sx={{textAlign: "left"}}>Gilles.is</Box>
+                <Box as={Themed.h3} sx={{textAlign: "center"}}>{post.slug}</Box>
+                <Box as={Themed.h3} sx={{textAlign: "right"}} variant="text.hyperlink"
+                    onClick={(e) => {
+                        setColorMode(colorMode === 'default' ? 'dark' : 'default')
+                    }}>
+                    Toggle {colorMode === 'default' ? 'Dark' : 'Light'}
+                </Box>
+            </Grid>
             <hr/>
             <MDXRenderer>{post.body}</MDXRenderer>
         </>
