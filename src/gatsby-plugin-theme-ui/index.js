@@ -4,6 +4,9 @@ import "@fontsource/fira-code"
 import "@fontsource/material-icons"
 import "@fontsource/share-tech"
 
+import theme from "@theme-ui/prism/presets/prism.json"
+
+
 export default {
     breakpoints: ['40em', '52em', '64em'],
     space: [0, 4, 8, 16, 32, 64, 128, 256, 512],
@@ -110,8 +113,10 @@ export default {
             }
         },
         code: {
+            ...theme,
             variant: 'text.code',
             fontSize: 'inherit',
+            bg: 'muted',
         },
         p: {
             code: {

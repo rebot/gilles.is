@@ -2,7 +2,7 @@
 
 import React from "react"
 import { graphql } from "gatsby"
-import { jsx, useColorMode, Styled as Themed } from "theme-ui"
+import { jsx, useColorMode, Themed } from "theme-ui"
 import MDXRenderer from "gatsby-plugin-mdx/mdx-renderer"
 
 /* 
@@ -17,7 +17,7 @@ export default function BlogPost({ data }) {
             <Themed.h3>{post.slug}</Themed.h3>
             <button
                 onClick={(e) => {
-                    setColorMode(colorMode === 'default' ? 'peach' : 'default')
+                    setColorMode(colorMode === 'default' ? 'dark' : 'default')
                 }}>
                 Toggle {colorMode === 'default' ? 'Dark' : 'Light'}
             </button>

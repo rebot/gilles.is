@@ -1,3 +1,5 @@
+const path = require('path');
+
 module.exports = {
   siteMetadata: {
     title: "Gilles.is",
@@ -8,9 +10,10 @@ module.exports = {
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
     {
-      resolve: "gatsby-plugin-mdx",
+      resolve: "gatsby-plugin-root-import",
       options: {
-        extensions: [".mdx", ".md"],
+        src: path.join(__dirname, "src"),
+        components: path.join(__dirname, "src/components")
       }
     },
     {
@@ -42,6 +45,12 @@ module.exports = {
       resolve: "gatsby-plugin-theme-ui",
       options: {
         preset: "@theme-ui/preset-tosh",
+      }
+    },
+    {
+      resolve: "gatsby-plugin-mdx",
+      options: {
+        extensions: [".mdx", ".md"],
       }
     },
   ],
