@@ -13,6 +13,7 @@ module.exports = {
       resolve: "gatsby-plugin-root-import",
       options: {
         src: path.join(__dirname, "src"),
+        pages: path.join(__dirname, "src/pages"),
         components: path.join(__dirname, "src/components")
       }
     },
@@ -51,6 +52,9 @@ module.exports = {
       resolve: "gatsby-plugin-mdx",
       options: {
         extensions: [".mdx", ".md"],
+        defaultLayouts: {
+          default: path.resolve(`./src/templates/blog-post.js`)
+        },
         gatsbyRemarkPlugins: [
           {
             resolve: "gatsby-remark-katex",

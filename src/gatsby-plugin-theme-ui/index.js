@@ -35,18 +35,20 @@ export default {
     colors: {
         text: '#000',
         background: '#fff',
-        primary: '#07c',
+        primary: '#0000CD',
         secondary: '#30c',
         highlight: '#ffff88',
         muted: '#f6f6f6',
-        accent: '#9BD6CC',
+        accent: '#d95d39',
         heading: '#001f42',
+        comment: 'lightslategrey',
         modes: {
             dark: {
                 text: '#fff',
                 background: '#000',
-                primary: '#0cf',
-                heading: '#f6f6f6'
+                primary: '#1E90FF',
+                heading: '#f6f6f6',
+                comment: null
             },
             peach: {
                 text: '#515151',
@@ -126,7 +128,7 @@ export default {
             fontSize: 'inherit',
             bg: 'muted',
             ".comment": {
-                color: 'gainsboro'
+                color: 'comment'
             }
         },
         p: {
