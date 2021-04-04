@@ -7,12 +7,11 @@ import MDXRenderer from "gatsby-plugin-mdx/mdx-renderer"
 
 import Header from "components/Header"
 
-export default function BlogPost({ children, data, pageContext }) {
+export default function BlogPost({ path, children, data, pageContext }) {
     const post = data && data.mdx
-    console.log(pageContext)
     return (
         <>
-            <Header title={pageContext.slug} />
+            <Header title={path} />
             {post && 
                 <Grid sx={{
                     fontStyle: "italic",

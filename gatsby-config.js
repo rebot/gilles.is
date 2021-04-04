@@ -3,6 +3,9 @@ const path = require('path');
 module.exports = {
   siteMetadata: {
     title: "Gilles.is",
+    description: "Gilles.is sharing/talking/cycling/writing/...",
+    author: "Gilles Trenson",
+    siteURL: "https://gilles.is"
   },
   plugins: [
     "gatsby-plugin-image",
