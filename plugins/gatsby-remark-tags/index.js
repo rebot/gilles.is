@@ -2,19 +2,19 @@ const visit = require("unist-util-visit")
 const { paragraph, text, link } = require("mdast-builder")
 const toString = require("mdast-util-to-string")
 
-module.exports = async ({ markdownAST }, pluginOptions) => {
+module.exports = ({ markdownAST }, pluginOptions) => {
     const regex = /#\w*/g
-    visit(markdownAST, 'text', node => {
-        const body = toString(node)
-        console.log(regex.test(body))
-        if (regex.test(body)){
-            const tags = body.match(regex)
-            console.log(tags)
-            const ast = paragraph(tags.map(tag => link(tag, null, text(tag))))
-            node.type = ast.type
-            node.children = ast.children
-            delete node.value
-        }
+    visit(markdownAST, "text", (node) => {
+        
+        if (!regex.test(node.value)) return
+
+        const html = node.value.replaceAll(/#\w+/g, (m) => 
+            `<a target="${m} noreferer">${m}</a>`
+        )
+        
+        node.type = "html"
+        node.children = undefined
+        node.value = html
     })
     return markdownAST
 }
