@@ -1,5 +1,5 @@
 Arguments: 
-  /Users/b0hr/.nvm/versions/node/v15.5.0/bin/node /Users/b0hr/.yarn/bin/yarn.js add gatsby-remark-tags
+  /Users/b0hr/.nvm/versions/node/v15.5.0/bin/node /Users/b0hr/.yarn/bin/yarn.js cdev
 
 PATH: 
   /Users/b0hr/.yarn/bin:/Users/b0hr/.config/yarn/global/node_modules/.bin:/Users/b0hr/.cargo/bin:/Users/b0hr/.local/bin:/Users/b0hr/.nvm/versions/node/v15.5.0/bin:/Library/Frameworks/Python.framework/Versions/3.8/bin:/Users/b0hr/.cargo/bin:/Library/Frameworks/Python.framework/Versions/3.6/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/TeX/texbin:/usr/local/go/bin:/usr/local/share/dotnet:/Library/Apple/usr/bin:/Library/Frameworks/Mono.framework/Versions/Current/Commands:/Applications/Postgres.app/Contents/Versions/latest/bin:/Applications/Xamarin Workbooks.app/Contents/SharedSupport/path-bin:/Users/b0hr/Development/Go/bin:/Users/b0hr/Development/Flutter/bin:/Users/b0hr/.npm-packages/bin
@@ -14,17 +14,12 @@ Platform:
   darwin x64
 
 Trace: 
-  Error: https://registry.yarnpkg.com/gatsby-remark-tags: Not found
-      at Request.params.callback [as _callback] (/Users/b0hr/.yarn/lib/cli.js:66988:18)
-      at Request.self.callback (/Users/b0hr/.yarn/lib/cli.js:140749:22)
-      at Request.emit (node:events:376:20)
-      at Request.<anonymous> (/Users/b0hr/.yarn/lib/cli.js:141721:10)
-      at Request.emit (node:events:376:20)
-      at IncomingMessage.<anonymous> (/Users/b0hr/.yarn/lib/cli.js:141643:12)
-      at Object.onceWrapper (node:events:482:28)
-      at IncomingMessage.emit (node:events:388:22)
-      at endReadableNT (node:internal/streams/readable:1305:12)
-      at processTicksAndRejections (node:internal/process/task_queues:80:21)
+  SyntaxError: /Users/b0hr/Development/Project/Gilles.is/package.json: Unexpected token } in JSON at position 364
+      at JSON.parse (<anonymous>)
+      at /Users/b0hr/.yarn/lib/cli.js:1625:59
+      at Generator.next (<anonymous>)
+      at step (/Users/b0hr/.yarn/lib/cli.js:310:30)
+      at /Users/b0hr/.yarn/lib/cli.js:321:13
 
 npm manifest: 
   {
@@ -41,7 +36,8 @@ npm manifest:
       "start": "gatsby develop",
       "build": "gatsby build",
       "serve": "gatsby serve",
-      "clean": "gatsby clean"
+      "clean": "gatsby clean",
+      "cdev": "gatsby clean && gatsby develop",
     },
     "dependencies": {
       "@fontsource/crimson-text": "^4.2.2",
@@ -61,10 +57,12 @@ npm manifest:
       "gatsby-plugin-sharp": "^3.1.1",
       "gatsby-plugin-theme-ui": "^0.6.1-canary.1808020.0",
       "gatsby-remark-katex": "^4.2.0",
+      "gatsby-remark-tags": "./plugins/gatsby-remark-tags",
       "gatsby-source-filesystem": "^3.1.0",
       "gatsby-source-git": "^1.1.0",
       "gatsby-transformer-sharp": "^3.1.0",
       "katex": "^0.13.0",
+      "mdast-builder": "^1.1.1",
       "react": "^17.0.1",
       "react-dom": "^17.0.1",
       "react-helmet": "^6.1.0",
@@ -6644,6 +6642,13 @@ Lockfile:
       remark-math "^1.0.6"
       unist-util-visit "^1.4.1"
   
+  gatsby-remark-tags@./plugins/gatsby-remark-tags:
+    version "1.0.0"
+    dependencies:
+      mdast-builder "^1.1.1"
+      mdast-util-to-string "^2.0.0"
+      unist-util-visit "^2.0.3"
+  
   gatsby-source-filesystem@^2.1.19:
     version "2.11.1"
     resolved "https://registry.yarnpkg.com/gatsby-source-filesystem/-/gatsby-source-filesystem-2.11.1.tgz#c90f49c096c4bdafd8e68462966b3a6e21fd746b"
@@ -9166,6 +9171,13 @@ Lockfile:
     version "5.0.0"
     resolved "https://registry.yarnpkg.com/md5-file/-/md5-file-5.0.0.tgz#e519f631feca9c39e7f9ea1780b63c4745012e20"
     integrity sha512-xbEFXCYVWrSx/gEKS1VPlg84h/4L20znVIulKw6kMfmBUAZNAnF00eczz9ICMl+/hjQGo5KSXRxbL/47X3rmMw==
+  
+  mdast-builder@^1.1.1:
+    version "1.1.1"
+    resolved "https://registry.yarnpkg.com/mdast-builder/-/mdast-builder-1.1.1.tgz#ccaaa5ead8ec9c69883ec87d289770569e4b49b2"
+    integrity sha512-a3KBk/LmYD6wKsWi8WJrGU/rXR4yuF4Men0JO0z6dSZCm5FrXXWTRDjqK0vGSqa+1M6p9edeuypZAZAzSehTUw==
+    dependencies:
+      "@types/unist" "^2.0.3"
   
   mdast-squeeze-paragraphs@^4.0.0:
     version "4.0.0"
@@ -13771,7 +13783,7 @@ Lockfile:
       "@types/unist" "^2.0.0"
       unist-util-is "^4.0.0"
   
-  unist-util-visit@2.0.3, unist-util-visit@^2.0.0, unist-util-visit@^2.0.2:
+  unist-util-visit@2.0.3, unist-util-visit@^2.0.0, unist-util-visit@^2.0.2, unist-util-visit@^2.0.3:
     version "2.0.3"
     resolved "https://registry.yarnpkg.com/unist-util-visit/-/unist-util-visit-2.0.3.tgz#c3703893146df47203bb8a9795af47d7b971208c"
     integrity sha512-iJ4/RczbJMkD0712mGktuGpm/U4By4FfDonL7N/9tATGIF4imikjOuagyMY53tnZq3NP6BcmlrHhEKAfGWjh7Q==

@@ -12,7 +12,8 @@
     "start": "gatsby develop",
     "build": "gatsby build",
     "serve": "gatsby serve",
-    "clean": "gatsby clean"
+    "clean": "gatsby clean",
+    "cdev": "gatsby clean && gatsby develop"
   },
   "dependencies": {
     "@fontsource/crimson-text": "^4.2.2",
@@ -43,6 +44,7 @@
     "react-helmet": "^6.1.0",
     "remark-emoji": "^2.1.0",
     "remark-html-katex": "^3.0.0",
+    "remark-jargon": "^2.14.0",
     "remark-math": "3",
     "theme-ui": "^0.6.1"
   }

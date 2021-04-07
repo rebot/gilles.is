@@ -1,5 +1,7 @@
 const path = require('path');
 
+const jargon = require("./src/util/jargon.js")
+
 module.exports = {
   siteMetadata: {
     title: "Gilles.is",
@@ -76,6 +78,7 @@ module.exports = {
           require("remark-emoji"),
           require("remark-math"),
           require("remark-html-katex"),
+          [require("remark-jargon"), { jargon: jargon }]
         ], 
       }
     },

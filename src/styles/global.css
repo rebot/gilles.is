@@ -1,0 +1,61 @@
+.jargon-term {
+    text-decoration: underline dotted var(--theme-ui-colors-primary);
+    text-underline-offset: 0.1em;
+    text-decoration-thickness: 0.01em;
+  }
+  
+.jargon-term::after {
+    content: "?";
+    font-weight: bold;
+    display: inline-block;
+    transform: translate(-0.1em, -0.3em);
+    font-size: 70%;
+    color: var(--theme-ui-colors-primary);
+    margin-left: 3px;
+}
+
+.jargon-term:hover {
+    position: relative;
+    text-decoration: none;
+    cursor: help;
+}
+
+.jargon-term .jargon-info {
+    display: none
+}
+
+.jargon-term:hover .jargon-info {
+    display: block;
+    position: absolute;
+    top: 1.7em;
+    left: 0;
+    background: var(--theme-ui-colors-muted);
+    border: 0px solid var(--theme-ui-colors-text);
+    border-right-width: 4px;
+    border-bottom-width: 4px;
+    padding: 8px;
+    font-size: 90%;
+    min-width: 250px;
+    max-width: 450px;
+    z-index: 1;
+}
+
+.tag {
+    box-sizing: border-box;
+    margin: 0;
+    min-width: 0;
+    display: inline-block;
+    vertical-align: baseline;
+    font-size: 12px;
+    font-weight: 700;
+    white-space: nowrap;
+    padding-left: 4px;
+    padding-right: 4px;
+    border-radius: 2px;
+    color: white !important;
+    background-color: var(--theme-ui-colors-primary);
+    background-clip: padding-box;
+    margin-left: 4px;
+    text-decoration: none !important;
+  }
+  

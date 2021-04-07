@@ -11632,6 +11632,13 @@ remark-html-katex@^3.0.0:
     unified "^9.0.0"
     unist-util-visit "^2.0.0"
 
+remark-jargon@^2.14.0:
+  version "2.14.0"
+  resolved "https://registry.yarnpkg.com/remark-jargon/-/remark-jargon-2.14.0.tgz#a4535d67b38baa8cce7708815cefeafe1a8d3444"
+  integrity sha512-9nyvYGJ8U5oH4D6Lh/KT5lfzGItmtWc6f/4Rp4VNry5gK9t05BheFxpv1O6aKqevmZ5JAnLzrXTe8i0EBg4ZKw==
+  dependencies:
+    unist-util-visit "^2.0.3"
+
 remark-math@3:
   version "3.0.1"
   resolved "https://registry.yarnpkg.com/remark-math/-/remark-math-3.0.1.tgz#85a02a15b15cad34b89a27244d4887b3a95185bb"
