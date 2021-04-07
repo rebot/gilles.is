@@ -7,5 +7,17 @@
     "mdast-builder": "^1.1.1",
     "mdast-util-to-string": "^2.0.0",
     "unist-util-visit": "^2.0.3"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.13.14",
+    "@babel/core": "^7.13.14"
+  },
+  "scripts": {
+    "build": "babel src --out-dir .",
+    "prepare": "cross-env NODE_ENV=production yarn build",
+    "watch": "babel -w src --out-dir ."
+  },
+  "engines": {
+    "node": ">=12.13.0"
   }
 }
