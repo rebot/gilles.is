@@ -6563,6 +6563,13 @@ gatsby-remark-katex@^4.2.0:
     remark-math "^1.0.6"
     unist-util-visit "^1.4.1"
 
+gatsby-remark-tags@./plugins/gatsby-remark-tags:
+  version "1.0.0"
+  dependencies:
+    mdast-builder "^1.1.1"
+    mdast-util-to-string "^2.0.0"
+    unist-util-visit "^2.0.3"
+
 gatsby-source-filesystem@^2.1.19:
   version "2.11.1"
   resolved "https://registry.yarnpkg.com/gatsby-source-filesystem/-/gatsby-source-filesystem-2.11.1.tgz#c90f49c096c4bdafd8e68462966b3a6e21fd746b"
@@ -9085,6 +9092,13 @@ md5-file@^5.0.0:
   version "5.0.0"
   resolved "https://registry.yarnpkg.com/md5-file/-/md5-file-5.0.0.tgz#e519f631feca9c39e7f9ea1780b63c4745012e20"
   integrity sha512-xbEFXCYVWrSx/gEKS1VPlg84h/4L20znVIulKw6kMfmBUAZNAnF00eczz9ICMl+/hjQGo5KSXRxbL/47X3rmMw==
+
+mdast-builder@^1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/mdast-builder/-/mdast-builder-1.1.1.tgz#ccaaa5ead8ec9c69883ec87d289770569e4b49b2"
+  integrity sha512-a3KBk/LmYD6wKsWi8WJrGU/rXR4yuF4Men0JO0z6dSZCm5FrXXWTRDjqK0vGSqa+1M6p9edeuypZAZAzSehTUw==
+  dependencies:
+    "@types/unist" "^2.0.3"
 
 mdast-squeeze-paragraphs@^4.0.0:
   version "4.0.0"
@@ -13690,7 +13704,7 @@ unist-util-visit-parents@^3.0.0:
     "@types/unist" "^2.0.0"
     unist-util-is "^4.0.0"
 
-unist-util-visit@2.0.3, unist-util-visit@^2.0.0, unist-util-visit@^2.0.2:
+unist-util-visit@2.0.3, unist-util-visit@^2.0.0, unist-util-visit@^2.0.2, unist-util-visit@^2.0.3:
   version "2.0.3"
   resolved "https://registry.yarnpkg.com/unist-util-visit/-/unist-util-visit-2.0.3.tgz#c3703893146df47203bb8a9795af47d7b971208c"
   integrity sha512-iJ4/RczbJMkD0712mGktuGpm/U4By4FfDonL7N/9tATGIF4imikjOuagyMY53tnZq3NP6BcmlrHhEKAfGWjh7Q==

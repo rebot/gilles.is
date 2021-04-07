@@ -62,9 +62,15 @@ module.exports = {
           {
             resolve: "gatsby-remark-katex",
             options: {
-              strict: `ignore`,
+              strict: "ignore",
             }
           },
+          {
+            resolve: "gatsby-remark-tags",
+            options: {
+              strict: "ignore",
+            }
+          }
         ],
         remarkPlugins: [
           require("remark-emoji"),
